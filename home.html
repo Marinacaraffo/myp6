@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link href="https://fonts.cdnfonts.com/css/hbo-max-2" rel="stylesheet">
+	<link rel="stylesheet" href="./estilos.css">
+	<title> HBO MAX </title>
+	<style>
+		.carousel-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .gallery {
+    /*background-color: #333;*/
+    padding: 20px;
+  }
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class="ico">
+			<a href="busqueda.html"><p class="bi bi-search"></p></a>
+		</div>
+		<div class="ico">
+			<a href="home.html"><i class="bi bi-house-door"></i></a>
+			<i class="bi bi-arrow-left"></i>
+			<i class="bi bi-universal-access"></i>
+		</div>
+	</div>
+	<center>
+		<div class="contenedor-img-princ">
+			<div class="imagen-principal">
+			<a href="resultados.html"><img src="Untitled design.png"></a>
+		</div>
+	</center>
+
+
+		<div class="text">
+			<h3>NUESTRAS RECOMENDACIONES PARA TI</h3>
+		</div>
+		<hr>
+		<div class="contenedor-recom">
+			<p class="recom">RECOMENDACIONES SEMANALES</p>
+		</div>
+		<hr>
+		<div class="gallery">
+			<div class="carousel">
+				<!-- Carrusel 1 -->
+				<hr>
+				<button class="bi bi-chevron-right next-button"></button>
+				<div class="carousel-wrapper">
+				  <button type="button" class="btn btn-outline-primary"><img src="./birdbox.jpg" alt="Imagen 1" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="./bohemian.jpg" alt="Imagen 2" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="c97a54b852439218025ebea12900a511.jpg" alt="Imagen 3" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="call.jpg" alt="Imagen 4" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="diablo.jpg" alt="Imagen 5" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="emolahomes.jpg" alt="Imagen 1" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="cruela.jpg" alt="Imagen 2" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="killbill.jpg" alt="Imagen 3" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="insideout.jpg" alt="Imagen 4" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="peakyblinders.jpg" alt="Imagen 5" class="carousel-image"></button>
+				</div>
+				<button class="bi bi-chevron-left prev-button"></button>
+			</div>
+		</div>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', ()=>{
+				const carousels = document.querySelectorAll('.carousel');
+	
+				carousels.forEach(function (carousel){
+				const prevButton = carousel.querySelector('.prev-button');
+				const nextButton = carousel.querySelector('.next-button');
+				const carouselWrapper = carousel.querySelector('.carousel-wrapper');
+	
+				let currentIndex = 0;
+				const images = carouselWrapper.querySelectorAll('.carousel-image');
+				const imageWidth = images[0].clientWidth;
+				const numImages = images.length;
+	
+				prevButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex -1 + numImages) % numImages;
+					updateCarousel();
+				});
+	
+				nextButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex + 1) % numImages;
+					updateCarousel();
+				});
+	
+				function updateCarousel(){
+					const translateX = -currentIndex * imageWidth;
+					carouselWrapper.style.transform = `translateX(${translateX}px)`;
+				}
+			});
+		});
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+	
+	<div class="gallery">
+			<div class="carousel">
+				<!-- Carrusel 2 -->
+				<h3>Novedades </h3>
+				<hr>
+				<button class="bi bi-chevron-right next-button"></button>
+				<div class="carousel-wrapper">
+				  <button type="button" class="btn btn-outline-primary"><img src="malefica.jpg" alt="Imagen 1" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="star.jpg" alt="Imagen 2" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="parasite.jpg" alt="Imagen 3" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="pitch.jpg" alt="Imagen 4" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="ratatouille.jpg" alt="Imagen 5" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="up.jpg" alt="Imagen 1" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="zootopia.jpg" alt="Imagen 2" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="theoffice.jpg" alt="Imagen 3" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="queens.jpg" alt="Imagen 4" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="the100.jpg" alt="Imagen 5" class="carousel-image"></button>
+				</div>
+				<button class="bi bi-chevron-left prev-button"></button>
+			</div>
+		</div>
+		<div>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', ()=>{
+				const carousels = document.querySelectorAll('.carousel');
+	
+				carousels.forEach(function (carousel){
+				const prevButton = carousel.querySelector('.prev-button');
+				const nextButton = carousel.querySelector('.next-button');
+				const carouselWrapper = carousel.querySelector('.carousel-wrapper');
+	
+				let currentIndex = 0;
+				const images = carouselWrapper.querySelectorAll('.carousel-image');
+				const imageWidth = images[0].clientWidth;
+				const numImages = images.length;
+	
+				prevButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex -1 + numImages) % numImages;
+					updateCarousel();
+				});
+	
+				nextButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex + 1) % numImages;
+					updateCarousel();
+				});
+	
+				function updateCarousel(){
+					const translateX = -currentIndex * imageWidth;
+					carouselWrapper.style.transform = `translateX(${translateX}px)`;
+				}
+			});
+		});
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

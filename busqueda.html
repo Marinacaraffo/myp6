@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link href="https://fonts.cdnfonts.com/css/hbo-max-2" rel="stylesheet">
+	<link rel="stylesheet" href="./estilos.css">
+	<title> HBO MAX </title>
+	<style>
+		.carousel-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .gallery {
+    /*background-color: #333;*/
+    padding: 20px;
+  }
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .enlaces{
+	display: flex;
+  }
+
+	</style>
+</head>
+<body>
+		<div class="ico">
+			<div class="nav">
+		<div class="ico">
+			<a href="busqueda.html"><p class="bi bi-search"></p></a>
+		</div>
+		<div class="ico">
+			<a href="home.html"><i class="bi bi-house-door"></i></a>
+			<a href="reciente.html"><i class="bi bi-arrow-left"></i></a>
+			<a href="ayuda.html"><i class="bi bi-universal-access"></i></a>
+		</div>
+	</div>
+		</div>
+	</div>
+	<center>
+        <div>
+			<h2>¿QUE ESTAS BUSCANDO?</h2>
+		</div>
+		<hr>
+		<div>
+			<p>completa alguna de estas casillas para agilizar tu búsqueda</p>
+		</div>
+		<hr>
+        <form action="./resultados.html">
+            <div>
+                <label for="titulo">Título</label>
+            </div>
+            <div>
+                <input type="text" class="btn btn-light">
+            </div>
+            <div>
+                <label for="genero">género (opcional)</label>
+            </div>
+            <div>
+                <input type="text" class="btn btn-light">
+            </div>
+            <div>
+                <label for="tipo">Serie - película -documental</label>
+            </div>
+            <div>
+                <input type="text" class="btn btn-light">
+            </div>
+			
+            <button type="submit" onclick="buscar()" class="btn btn-primary">buscar</button>
+        </form>
+	</center>
+		<script>
+            function buscar(){
+                window.location.href = "./resultados.html";
+            }
+
+            function goBack(){
+                window.history.back()
+            }
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

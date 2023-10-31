@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link href="https://fonts.cdnfonts.com/css/hbo-max-2" rel="stylesheet">
+	<link rel="stylesheet" href="./estilos.css">
+	<title> HBO MAX </title>
+	<style>
+		.carousel-image {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px;
+  }
+  .gallery {
+    /*background-color: #333;*/
+    padding: 20px;
+  }
+  .carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .carousel {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .enlaces{
+	display: flex;
+  }
+
+	</style>
+</head>
+<body>
+	<nav class="iconos">
+	<div class="ico">
+			<div class="nav">
+		<div class="ico">
+			<a href="busqueda.html"><p class="bi bi-search"></p></a>
+		</div>
+		<div class="ico">
+			<a href="home.html"><i class="bi bi-house-door"></i></a>
+			<a href="reciente.html"><i class="bi bi-arrow-left"></i></a>
+			<a href="ayuda.html"><i class="bi bi-universal-access"></i></a>
+		</div>
+				</nav>
+	<center>		
+		<hr>
+		
+		<div id="carouselExampleAutoplaying" class="carousel-slide" data-bs-ride="carousel">
+  		<div class="carousel-inner">
+   		 <div class="carousel-item active">
+      <img src="alice.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="coraline.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="dark.png"class="d-block w-100" alt="...">
+    </div>
+	</center>		
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="left" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+		<div class="text-carrousel">
+			<h2> Visto 
+				recientemente </h2>
+</div>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', ()=>{
+				const carousels = document.querySelectorAll('.carousel');
+	
+				carousels.forEach(function (carousel){
+				const prevButton = carousel.querySelector('.prev-button');
+				const nextButton = carousel.querySelector('.next-button');
+				const carouselWrapper = carousel.querySelector('.carousel-wrapper');
+	
+				let currentIndex = 0;
+				const images = carouselWrapper.querySelectorAll('.carousel-image');
+				const imageWidth = images[0].clientWidth;
+				const numImages = images.length;
+	
+				prevButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex -1 + numImages) % numImages;
+					updateCarousel();
+				});
+	
+				nextButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex + 1) % numImages;
+					updateCarousel();
+				});
+	
+				function updateCarousel(){
+					const translateX = -currentIndex * imageWidth;
+					carouselWrapper.style.transform = `translateX(${translateX}px)`;
+				}
+			});
+		});
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+				<div class="gallery">
+			<div class="carousel">
+				<!-- Carrusel 2 -->
+				<hr>
+				<button class="bi bi-chevron-right next-button"></button>
+				<div class="carousel-wrapper">
+				  <button type="button" class="btn btn-outline-primary"><img src="aladdin.png" alt="Imagen 1" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="steve.png"alt="Imagen 2" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="chicken litte.png" alt="Imagen 3" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="cindirella.png" alt="Imagen 4" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="encantanda.png" alt="Imagen 5" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="game plan.png" alt="Imagen 1" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="war horse.png" alt="Imagen 2" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="dark.png" alt="Imagen 3" class="carousel-image"></button>
+				  <button type="button" class="btn btn-outline-primary"><img src="paddington.png" alt="Imagen 4" 
+				</div>
+				<button class="bi bi-chevron-left prev-button"></button>
+			</div>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', ()=>{
+				const carousels = document.querySelectorAll('.carousel');
+	
+				carousels.forEach(function (carousel){
+				const prevButton = carousel.querySelector('.prev-button');
+				const nextButton = carousel.querySelector('.next-button');
+				const carouselWrapper = carousel.querySelector('.carousel-wrapper');
+	
+				let currentIndex = 0;
+				const images = carouselWrapper.querySelectorAll('.carousel-image');
+				const imageWidth = images[0].clientWidth;
+				const numImages = images.length;
+	
+				prevButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex -1 + numImages) % numImages;
+					updateCarousel();
+				});
+	
+				nextButton.addEventListener('click', ()=>{
+					currentIndex = (currentIndex + 1) % numImages;
+					updateCarousel();
+				});
+	
+				function updateCarousel(){
+					const translateX = -currentIndex * imageWidth;
+					carouselWrapper.style.transform = `translateX(${translateX}px)`;
+				}
+			});
+		});
+		</script>
+		<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

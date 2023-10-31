@@ -1,0 +1,124 @@
+body{
+	background: url('./fondo1.jpg');
+	background-size: cover;
+	color: #b6b6b6;
+}
+h1{
+	font-family: 'HBO Max', sans-serif;
+	font-size: 80px;
+}
+h2{
+	font-family: 'HBO Max', sans-serif;
+}
+.contenedor-img-princ{
+	position: absolute;
+	left: 0%;
+	right: 0%;
+}
+.imagen-principal{
+	width: 35%;
+	height: 60%;
+    margin-left: auto;
+    margin-right: auto;	
+}
+.imagenes{ 
+	display: flex;
+	justify-content: center;
+	
+}
+.rounded-circle{
+	height: 300px;
+	width: 600px;
+	margin-top: 30px;
+	margin-right: 50px;
+	margin-left: 50px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	
+}
+
+img{
+	width: 75%;
+}
+.galeria{
+	display: flex;
+}
+.text{
+	writing-mode: vertical-lr;
+	transform: rotate(180deg);
+	transform-origin: center;
+	white-space: nowrap;
+}
+.nav{
+	display: flex;
+	margin: 1%;
+	justify-content: end;
+}
+.ico{
+	margin: 1%;
+	font-size: 50px;
+}
+.recom{
+	color:#9a29e2;
+	margin-left: 5%;
+}
+.contenedor-recom{
+	display: block;
+	margin-bottom:10px;
+	background: #444;
+}
+.rounded-circle{
+	width: 50%;
+	margin: 5%;
+}
+.avatares{
+	display: flex;
+	background: rgb(60, 50, 180, 0.6);
+}
+.number{
+	color: white;
+}
+.cards{
+	margin: 0;
+	padding: 0;
+}
+.contairner{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.cards{
+	border-radius: 6px;
+	overflow: hidden;
+	cursor: default;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.card{
+	background-color: transparent;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.card-text{
+	color: white;
+}
+.carousel-slide{
+	width: 30%;
+    margin-left: 50%;
+    
+}
+.text-carrousel{
+	font-size: 90px;
+	display: inline-block;
+	vertical-align: top;
+}
+.left{
+	interval:false;
+	wrap:false;
+}
+.content{
+	align-content: center;
+	display: block;
+}
